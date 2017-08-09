@@ -42,6 +42,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/xos/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
+# Phonelocation!
+PRODUCT_COPY_FILES +=  \
+    vendor/xos/prebuilt/common/media/location/suda-phonelocation.dat:system/media/location/suda-phonelocation.dat
+
+# Google PinYin
+PRODUCT_COPY_FILES += $(shell test -d vendor/xos/prebuilt/google/app/GooglePinYin && \
+    find vendor/xos/prebuilt/google/app/GooglePinYin -name '*.apk' \
+    -printf '%p:system/app/GooglePinYin/%f ')
+PRODUCT_COPY_FILES += $(shell test -d vendor/xos/prebuilt/google/app/GooglePinYin && \
+    find vendor/xos/prebuilt/google/app/GooglePinYin -name '*.so' \
+    -printf '%p:system/app/GooglePinYin/lib/arm/%f ')
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/xos/prebuilt/common/bin/sysinit:system/bin/sysinit \
