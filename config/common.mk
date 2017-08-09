@@ -54,6 +54,10 @@ PRODUCT_COPY_FILES += $(shell test -d vendor/xos/prebuilt/google/app/GooglePinYi
     find vendor/xos/prebuilt/google/app/GooglePinYin -name '*.so' \
     -printf '%p:system/app/GooglePinYin/lib/arm/%f ')
 
+#ForceStop
+PRODUCT_COPY_FILES += \
+    vendor/xos/prebuilt/ForceStop/ForceStop.apk:system/app/ForceStop/ForceStop.apk
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/xos/prebuilt/common/bin/sysinit:system/bin/sysinit \
