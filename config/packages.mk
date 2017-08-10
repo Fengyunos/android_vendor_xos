@@ -47,7 +47,6 @@ endif
 PRODUCT_PACKAGES += \
     libbthost_if \
     BluetoothExt \
-    Browser \
     Terminal \
     ExactCalculator
 
